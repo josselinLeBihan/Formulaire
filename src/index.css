@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --color-custom-100: #f6f6f6;
+  --color-custom-500: #a08f8f;
+  --color-custom-700: #664c4c;
+  --color-custom-900: #181616;
+  --color-custom-error: #ed0131;
+  --color-custom-good: #0e6245;
+  --color-custom-active: #0048d9;
+  /* ... */
+}
+
+.btn-base {
+  @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-custom-active border border-transparent rounded-md shadow-sm hover:bg-custom-active focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-active disabled:bg-custom-500 disabled:text-custom-700 disabled:cursor-not-allowed;
+}
+
+.input-base {
+  @apply w-full flex flex-col justify-start items-start gap-0.5;
+}
+
+.input-base label {
+  @apply text-gray-700 font-medium flex flex-col w-full;
+}
+
+.input-base input,
+textarea,
+select {
+  @apply appearance-none flex-1 p-3 rounded bg-custom-100 text-custom-900 border *:focus:ring-2 enabled:focus:ring-custom-active enabled:focus:border-custom-active enabled:outline-custom-active enabled:hover:border-custom-active focus:outline-none;
+}
+
+.input-base input:disabled {
+  @apply disabled:text-custom-700;
+}
