@@ -1,5 +1,5 @@
-import Form from "./Components/Form/Form";
-import type { form } from "./Types/type";
+import Form from "./Components/Form/Form"
+import type { form } from "./Types/type"
 
 function App() {
   const formProps: form = {
@@ -10,6 +10,7 @@ function App() {
         type: "inputText",
         name: "mail",
         label: "Votre adresse e-mail",
+        confirm: true,
         placeholder: "mail@mail.fr",
         typeInput: "email",
         validations: [
@@ -30,7 +31,7 @@ function App() {
         name: "password",
         label: "mot de passe",
         setValue: false,
-        confirmPassword: true,
+        confirm: true,
         validations: [
           {
             type: "min",
@@ -75,19 +76,19 @@ function App() {
       },
     ],
     onSubmit: (data) => {
-      console.log("Form submitted:", data);
-      return true; //Indique que le formulaire a été soumis avec succès
+      console.log("Form submitted:", data)
+      return true //Indique que le formulaire a été soumis avec succès
     },
     submitButton: {
       label: "Envoyer",
     },
-  };
+  }
 
   return (
     <>
       <Form {...formProps} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
